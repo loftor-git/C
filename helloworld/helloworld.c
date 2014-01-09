@@ -1,9 +1,22 @@
-#include "stdio.h"
+#include <string.h>
+#include <stdio.h>
 
-int main(int argc, char const *argv[])
+int main()
 {
-	char word[] = "Helloworld!";
-	
-	printf("%s\n", word);
-	return 0;
+        printf("hello world\n");
+
+        char a[30]="string(a)";
+        char b[30]="string\0string";
+        int i;
+        strcpy(a,b);
+        printf("strcpy():");
+        for(i=0;i<30;i++){
+                printf("%c",a[i]);
+        }
+        memcpy(a,b,36);
+        printf("\nmemcpy():");
+        for(i=0;i<30;i++){
+                printf("%c",a[i]);
+        }
+        printf("\n");
 }

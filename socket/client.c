@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
     int port;
 
     port=8000;
-    nlp_host=gethostbyname("192.168.199.228");
+    nlp_host=gethostbyname("127.0.0.1");
      
     pin.sin_family=AF_INET;
     pin.sin_addr.s_addr=((struct in_addr *)(nlp_host->h_addr))->s_addr;

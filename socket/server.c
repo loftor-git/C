@@ -48,7 +48,7 @@ int main(int argc, char **argv)
         buf[numbytes] = '\0';
         printf("received: %s\n",buf);
         printf("send: hello world!\n");
-        send(sock,"hello world!hello world!hello world!hello world!hello world!hello world!",strlen("hello world!hello world!hello world!hello world!hello world!hello world!"),0);
+        send(sock,"hello world!",strlen("hello world!"),0);
         close(sock);
     }
     return 0;
